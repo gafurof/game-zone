@@ -1,25 +1,27 @@
 <template>
-  <v-app>
-    <v-main>
-      <!-- kontent -->
-    </v-main>
+  <nav class="top-nav">
+    <div class="top-nav__logo">MyApp</div>
 
-    <nav class="bottom-nav">
+    <div class="top-nav__items">
       <button
         v-for="item in navItems"
         :key="item.value"
-        class="nav-btn"
+        class="top-nav__btn"
         :class="{ active: activeTab === item.value }"
         @click="activeTab = item.value"
       >
-        <v-icon size="22">{{ item.icon }}</v-icon>
+        <v-icon size="20">{{ item.icon }}</v-icon>
         <span>{{ item.label }}</span>
       </button>
-    </nav>
-  </v-app>
+    </div>
+
+    <div class="top-nav__right">
+      <v-icon size="22" style="color: rgba(255,255,255,0.6); cursor:pointer;">mdi-magnify</v-icon>
+    </div>
+  </nav>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 
 const activeTab = ref('home')
@@ -33,55 +35,64 @@ const navItems = [
 </script>
 
 <style scoped>
-.bottom-nav {
+.top-nav {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
+  height: 56px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 8px 6px 16px;
-  gap: 2px;
+  justify-content: space-between;
+  padding: 0 24px;
   background: #1c1c1e;
   box-sizing: border-box;
-  width: 100%;
+  z-index: 100;
 }
 
-.nav-btn {
+.top-nav__logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  min-width: 80px;
+}
+
+.top-nav__items {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
-  flex: 1;
-  min-width: 0;
-  padding: 7px 4px;
+  gap: 4px;
+}
+
+.top-nav__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
   border: none;
   border-radius: 50px;
   background: transparent;
   cursor: pointer;
   transition: background 0.15s;
-  overflow: hidden;
-}
-
-.nav-btn .v-icon,
-.nav-btn span {
   color: rgba(255, 255, 255, 0.45);
-  transition: color 0.15s;
 }
 
-.nav-btn span {
-  font-size: 9px;
+.top-nav__btn span {
+  font-size: 13px;
   font-weight: 500;
-  white-space: nowrap;
+  color: inherit;
 }
 
-.nav-btn.active {
+.top-nav__btn .v-icon {
+  color: inherit;
+}
+
+.top-nav__btn:hover {
   background: #3a3a3c;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.nav-btn.active .v-icon,
-.nav-btn.active span {
+.top-nav__btn.active {
+  background: #3a3a3c;
   color: #ffffff;
 }
 </style>

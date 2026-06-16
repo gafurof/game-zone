@@ -1,8 +1,9 @@
 <template>
-  <h1 class="hidden-sm-and-down">hello world</h1>
+  <TopNavigation class="hidden-sm-and-down"/>
   <BottomNavigation class="hidden-md-and-up"/>
 </template>
 
 <script lang='ts' setup>
 import BottomNavigation from '@/components/layout/BottomNavigation.vue'
+import TopNavigation from '@/components/layout/TopNavigation.vue'
 </script>
