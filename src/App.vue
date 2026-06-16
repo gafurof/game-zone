@@ -14,12 +14,17 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden; 
+  min-height: 100vh;
+  
+  scrollbar-width: none; 
+  
+  -ms-overflow-style: none; 
 }
 
-#app {
-  width: 100%;
-  height: 100%;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
 }
 </style>
