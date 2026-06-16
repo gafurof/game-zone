@@ -1,5 +1,6 @@
 <template>
   <TopNavigation class="hidden-sm-and-down"/>
+  <router-view class="hidden-sm-and-down"/>
   <BottomNavigation class="hidden-md-and-up"/>
 </template>
 

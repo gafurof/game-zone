@@ -16,22 +16,24 @@
     </div>
 
     <div class="top-nav__right">
-      <v-icon size="22" style="color: rgba(255,255,255,0.6); cursor:pointer;">mdi-magnify</v-icon>
+      <v-icon size="22" style="color: rgba(255, 255, 255, 0.6); cursor: pointer"
+        >mdi-magnify</v-icon
+      >
     </div>
   </nav>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const activeTab = ref('home')
+const activeTab = ref("home");
 
 const navItems = [
-  { value: 'home',    icon: 'mdi-home',    label: 'Bosh'    },
-  { value: 'map',     icon: 'mdi-map',     label: 'Xarita'  },
-  { value: 'bron',    icon: 'mdi-lock',    label: 'Bron'    },
-  { value: 'account', icon: 'mdi-account', label: 'Akkaunt' },
-]
+  { value: "home", icon: "mdi-home", label: "Bosh" },
+  { value: "map", icon: "mdi-map", label: "Xarita" },
+  { value: "bron", icon: "mdi-lock", label: "Bron" },
+  { value: "account", icon: "mdi-account", label: "Akkaunt" },
+];
 </script>
 
 <style scoped>
