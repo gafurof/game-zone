@@ -29,7 +29,7 @@ import { ref } from "vue";
 const activeTab = ref("home");
 
 const navItems = [
-  { value: "home", icon: "mdi-home", label: "Bosh" },
+  { value: "home", icon: "mdi-home", label: "Home" },
   { value: "map", icon: "mdi-map", label: "Xarita" },
   { value: "bron", icon: "mdi-lock", label: "Bron" },
   { value: "account", icon: "mdi-account", label: "Akkaunt" },
